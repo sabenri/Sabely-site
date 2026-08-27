@@ -1,0 +1,41 @@
+:root {  
+    --background: #0d0d12;
+    --surface: #17171f;
+    --surface-light: #20202a;
+  
+    --baby-blue: #9fd8ff;
+    --blue-glow: #70bfff;
+  
+    --soft-pink: #ffb6d5;
+    --pink-glow: #ff8fc0;
+  
+    --text: #f5f5f7;
+    --muted-text: #a8a8b3;
+    --border: rgba(255, 255, 255, 0.1);
+  
+    --max-width: 1200px;
+    
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+ .navbar {
+    width: min(100% - 3rem, var(--max-width));
+    height: 90px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .project-card {
+    background: var(--surface);
+    border: 1px solid var(--surface);
+    border-radius: 18px;
+    overflow: hidden;
+    transform: transform o.3s ease, border-color 0.3s ease;
+ }
