@@ -72,6 +72,7 @@ body {
     background: var(--surface);
     border-color: var(--baby-blue);
     color: var(--baby-blue);
+    box-shadow: 0 0 15px var(--pink-glow);
  }
 
  section{
@@ -92,6 +93,19 @@ body {
     padding: 3rem 2rem;
     text-align: center;
     font-size: 1.1rem;
+ }
+
+ .tagline::after {
+    content: "|";
+    color: var(--soft-pink);
+    margin-left: 0.2rem;
+    animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+    50% {
+        opacity: 0;
+    }
  }
 
  .hero {
@@ -136,7 +150,13 @@ body {
     background: var(--baby-blue);
     color: var(--background);
     border: 1px solid var(--baby-blue);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   
+ }
+
+ .hero-buttons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--pink-glow);
  }
  .projects {
     padding: 5rem 0;
@@ -147,11 +167,11 @@ body {
  }
  .eyebrow{
     color: var(--baby-blue);
-    font-size: 0.5rem;
+    font-size: 3rem;
     letter-spacing: 0.15em;
  }
  .section-heading h2{
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0.5rem 0;
  }
  .section-heading h2 span {
