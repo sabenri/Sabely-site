@@ -24,6 +24,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: var(--background);
     color: var(--text);
@@ -129,6 +130,7 @@ body {
  .hero h1 span {
     color: var(--soft-pink);
  }
+
  .hero-text {
     max-width: 500px;
     color: var(--muted-text);
@@ -158,30 +160,37 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0 15px var(--pink-glow);
  }
+
  .projects {
     padding: 5rem 0;
  }
+
  .section-heading{
     text-align: center;
     margin-bottom: 3rem;
  }
+
  .eyebrow{
     color: var(--baby-blue);
     font-size: 3rem;
     letter-spacing: 0.15em;
  }
+
  .section-heading h2{
     font-size: 2rem;
     margin: 0.5rem 0;
  }
+
  .section-heading h2 span {
     color: var(--soft-pink);
  }
+
  .project-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1.5rem;
  }
+
  .project-card {
     height: 400px;
     background: transparent;
@@ -220,18 +229,38 @@ body {
     height: 100%;
     object-fit: cover;
  }
-.flip-hint {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
 
-    background: rgba(13, 13, 18, 0.8);
-    border-radius: 20px;
+.flip-hint {
+    color: var(--baby-blue);
+    font-size: 0.9rem;
+    background: rgba(13,13,18,0.8);
+    border-radius: 20px; 
     padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
 
 }
+
+.project-front-info {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   text-align: center;
+    background-color: linear-gradient(
+        to top,
+        rgba(13,13,18,0.95)
+        rgba(13,13,18,0)
+    );
+}
+
+.project-front-info h3 {
+    margin: 0 0 0.5rem;
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
  .project-card-back {
     background: var(--surface);
     border: 1px solid var(--border);
