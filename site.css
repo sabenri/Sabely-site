@@ -33,7 +33,6 @@ body {
 }
  .navbar {
     width: min(100% - 3rem, var(--max-width));
-    height: 90px;
     margin: auto;
     padding: 2rem 0;
     display: flex;
@@ -60,6 +59,7 @@ body {
 
  nav a {
     color: var(--text);
+    background-color: var(--soft-pink);
     text-decoration: none;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -100,17 +100,22 @@ body {
     border: none;
     border-radius: 20px;
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
  }
 
- .hero-text h1 {
+ .hero h1 {
     font-size: 4rem;
     margin: 0 0 1rem;
  }
 
- .hero-text h1 span {
+ .hero h1 span {
     color: var(--soft-pink);
  }
- .hero-text p {
+ .hero-text {
     max-width: 500px;
     color: var(--muted-text);
     font-size: 1.1rem;
@@ -120,20 +125,55 @@ body {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
- }
+}
 
- 
+    .hero-buttons a {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: var(--baby-blue);
+    color: var(--background);
+    border: 1px solid var(--baby-blue);
+  
+ }
+ .projects {
+    padding: 5rem 0;
+ }
+ .section-heading{
+    text-align: center;
+    margin-bottom: 3rem;
+ }
+ .eyebrow{
+    color: var(--baby-blue);
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+ }
+ .section-heading h2{
+    font-size: 3rem;
+    margin: 0.5rem 0;
+ }
+ .section-heading h2 span {
+    color: var(--soft-pink);
+ }
+ .project-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+ }
  .project-card {
     height: 400px;
     background: transparent;
     perspective: 1000px;
+    cursor: pointer;
  }
 
  .project-card-inner {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.7s ;
+    transition: transform 0.8s ;
     transform-style: preserve-3d;
  }
 
@@ -148,21 +188,30 @@ body {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 15px;
     overflow: hidden;
  }
 
- .project-card-front{
-    background: var(--surface);
-    border: 1px solid var(--border);
- }
 
- .project-card-front image {
+ .project-card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
  }
+.flip-hint {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
 
+    background: rgba(13, 13, 18, 0.8);
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+
+}
  .project-card-back {
     background: var(--surface);
     border: 1px solid var(--border);
