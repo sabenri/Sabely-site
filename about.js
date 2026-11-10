@@ -7,7 +7,7 @@ const SERVICE_ID = "service_626y4lq";
 const TEMPLATE_ID = "template_vv9echf";
 
 emailjs.init({
-    PublicKey: PUBLIC_KEY
+    publicKey: PUBLIC_KEY
 });
 
 contactForm.addEventListener("submit", async function(event) {
