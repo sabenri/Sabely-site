@@ -203,7 +203,7 @@
 
                 <a href="https://github.com/sabenri" target="_blank" rel="noopener noreferrer"> GitHub</a>
 
-                <a href="http://https://www.linkedin.com/in/sabely-enriquez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sabely-enriquez/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
 
             </div>
 
@@ -226,14 +226,13 @@
 
                 <label for="contact-message"> YOUR MESSAGE</label>
                 <textarea id="contact-message"
-                    name="Message"
+                    name="message"
                     placeholder="Please Write Me A Message... "
                     rows="5"
                     required
-                    >
-                </textarea>
+                    ></textarea>
 
-                <button type="submit" class="about-button">
+                <button type="submit" class="about-button" id="submit-button">
                     Send Message
                 </button>
 
@@ -243,7 +242,8 @@
         </div>
 
     </section>
-    <script src="about.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script src="about.js"></script>
 </main>
     
 </body>
