@@ -10,39 +10,47 @@ emailjs.init({
     PublicKey: PUBLIC_KEY
 });
 
-contactForm.addEventListener("submit", async (event) => {
+contactForm.addEventListener("submit", async function(event) {
+
     event.preventDefault();
 
-    if (!contactForm.checkValidity()){
+    if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
         return;
     }
 
     submitButton.disabled = true;
-    submitButton.textContent = "sending..";
+    submitButton.textContent = "Sending...";
 
     formStatus.textContent = "";
     formStatus.className = "";
 
-    try{
+    try {
         await emailjs.sendForm(
             SERVICE_ID,
             TEMPLATE_ID,
             contactForm
         );
 
-        formStatus.textContent = "Your message has been sent!";
+        formStatus.textContent =
+            "Thank you! Your message has been sent!";
 
         formStatus.className = "success";
-        contactForm.requestFullscreen();
-    } catch (error) {
-        console.error("Email failed to send", error);
 
-        formStatus.textContent = "Something went worng. Please try again.";
+        contactForm.reset();
+
+    } catch (error) {
+
+        console.error("Email error:", error);
+
+        formStatus.textContent =
+            "Something went wrong. Please try again.";
 
         formStatus.className = "error";
+
     } finally {
         submitButton.disabled = false;
-        submitButton.textContent = "send Message";
+        submitButton.textContent = "Send Message";
     }
+
 });
